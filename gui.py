@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\erika\Desktop\AA\build\build\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\erika\Desktop\BB\build\build\assets\frame0")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -20,14 +20,14 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
-window.geometry("1260x896")
+window.geometry("1260x708")
 window.configure(bg = "#FFFFFF")
 
 
 canvas = Canvas(
     window,
     bg = "#FFFFFF",
-    height = 896,
+    height = 708,
     width = 1260,
     bd = 0,
     highlightthickness = 0,
@@ -37,107 +37,11 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 canvas.create_rectangle(
     0.0,
-    0.0,
+    1.0,
     1260.0,
-    896.0,
-    fill="#CB6CE6",
-    outline="")
-
-canvas.create_rectangle(
-    367.5,
-    159.25,
-    892.5,
-    736.75,
+    715.0,
     fill="#FFFFFF",
     outline="")
-
-canvas.create_rectangle(
-    494.375,
-    532.875,
-    802.375,
-    584.5,
-    fill="#FFFFFF",
-    outline="")
-
-image_image_1 = PhotoImage(
-    file=relative_to_assets("image_1.png"))
-image_1 = canvas.create_image(
-    447.125,
-    559.125,
-    image=image_image_1
-)
-
-image_image_2 = PhotoImage(
-    file=relative_to_assets("image_2.png"))
-image_2 = canvas.create_image(
-    447.125,
-    461.125,
-    image=image_image_2
-)
-
-canvas.create_rectangle(
-    494.375,
-    438.375,
-    802.375,
-    490.0,
-    fill="#FFFFFF",
-    outline="")
-
-image_image_3 = PhotoImage(
-    file=relative_to_assets("image_3.png"))
-image_3 = canvas.create_image(
-    705.0,
-    288.0,
-    image=image_image_3
-)
-
-image_image_4 = PhotoImage(
-    file=relative_to_assets("image_4.png"))
-image_4 = canvas.create_image(
-    515.0,
-    295.0,
-    image=image_image_4
-)
-
-entry_image_1 = PhotoImage(
-    file=relative_to_assets("entry_1.png"))
-entry_bg_1 = canvas.create_image(
-    638.5,
-    555.5,
-    image=entry_image_1
-)
-entry_1 = Entry(
-    bd=0,
-    bg="#C5B7B7",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_1.place(
-    x=530.0,
-    y=540.0,
-    width=217.0,
-    height=29.0
-)
-
-entry_image_2 = PhotoImage(
-    file=relative_to_assets("entry_2.png"))
-entry_bg_2 = canvas.create_image(
-    638.5,
-    463.5,
-    image=entry_image_2
-)
-entry_2 = Entry(
-    bd=0,
-    bg="#C5B7B7",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_2.place(
-    x=530.0,
-    y=448.0,
-    width=217.0,
-    height=29.0
-)
 
 button_image_1 = PhotoImage(
     file=relative_to_assets("button_1.png"))
@@ -149,10 +53,274 @@ button_1 = Button(
     relief="flat"
 )
 button_1.place(
-    x=526.0,
-    y=627.0,
-    width=225.0,
-    height=69.0
+    x=1157.0,
+    y=620.0,
+    width=90.0,
+    height=71.0
+)
+
+canvas.create_rectangle(
+    405.0,
+    622.0,
+    1148.75,
+    681.4609375,
+    fill="#FFFFFF",
+    outline="")
+
+canvas.create_text(
+    428.0,
+    645.0,
+    anchor="nw",
+    text="Hazme una pregunta...",
+    fill="#B2ACAC",
+    font=("Lato Regular", 32 * -1)
+)
+
+canvas.create_rectangle(
+    400.0,
+    441.0,
+    934.0,
+    511.0,
+    fill="#FFFFFF",
+    outline="")
+
+canvas.create_text(
+    408.0,
+    457.0,
+    anchor="nw",
+    text="¡Hola, Alejandro! ¿Cómo puedo ayudarte?",
+    fill="#000000",
+    font=("Lato Regular", 28 * -1)
+)
+
+canvas.create_rectangle(
+    676.0,
+    520.0,
+    1197.0,
+    584.0,
+    fill="#B222DB",
+    outline="")
+
+canvas.create_text(
+    696.0,
+    536.0,
+    anchor="nw",
+    text="¿Cómo proceso la cancelación de un pedido?",
+    fill="#000000",
+    font=("Lato Regular", 24 * -1)
+)
+
+canvas.create_rectangle(
+    0.0,
+    1.0,
+    396.0,
+    716.0,
+    fill="#CB6CE6",
+    outline="")
+
+canvas.create_text(
+    77.0,
+    662.0,
+    anchor="nw",
+    text="Cerrar sesion",
+    fill="#FFFFFF",
+    font=("Lato Regular", 24 * -1)
+)
+
+button_image_2 = PhotoImage(
+    file=relative_to_assets("button_2.png"))
+button_2 = Button(
+    image=button_image_2,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_2 clicked"),
+    relief="flat"
+)
+button_2.place(
+    x=0.0,
+    y=645.0,
+    width=76.0,
+    height=54.0
+)
+
+image_image_1 = PhotoImage(
+    file=relative_to_assets("image_1.png"))
+image_1 = canvas.create_image(
+    371.0,
+    681.0,
+    image=image_image_1
+)
+
+canvas.create_rectangle(
+    364.0000019905502,
+    60.00000130235799,
+    380.1584120243791,
+    655.69970703125,
+    fill="#FFFFFF",
+    outline="")
+
+image_image_2 = PhotoImage(
+    file=relative_to_assets("image_2.png"))
+image_2 = canvas.create_image(
+    370.0,
+    35.0,
+    image=image_image_2
+)
+
+canvas.create_text(
+    15.75,
+    544.828125,
+    anchor="nw",
+    text="Fecha 4",
+    fill="#FFFFFF",
+    font=("Lato Regular", 30 * -1)
+)
+
+canvas.create_text(
+    15.75,
+    504.03515625,
+    anchor="nw",
+    text="Fecha 3\n",
+    fill="#FFFFFF",
+    font=("Lato Regular", 30 * -1)
+)
+
+canvas.create_text(
+    15.75,
+    457.7109375,
+    anchor="nw",
+    text="Fecha 2",
+    fill="#FFFFFF",
+    font=("Lato Regular", 30 * -1)
+)
+
+canvas.create_text(
+    15.75,
+    411.38671875,
+    anchor="nw",
+    text="Fecha 1\n",
+    fill="#FFFFFF",
+    font=("Lato Regular", 30 * -1)
+)
+
+canvas.create_text(
+    16.0,
+    365.0,
+    anchor="nw",
+    text="Historial",
+    fill="#FFFFFF",
+    font=("Lato Regular", 34 * -1)
+)
+
+canvas.create_rectangle(
+    9.0,
+    353.0,
+    306.0,
+    357.0,
+    fill="#FFFFFF",
+    outline="")
+
+button_image_3 = PhotoImage(
+    file=relative_to_assets("button_3.png"))
+button_3 = Button(
+    image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_3 clicked"),
+    relief="flat"
+)
+button_3.place(
+    x=26.0,
+    y=281.941162109375,
+    width=292.0,
+    height=40.117645263671875
+)
+
+button_image_4 = PhotoImage(
+    file=relative_to_assets("button_4.png"))
+button_4 = Button(
+    image=button_image_4,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_4 clicked"),
+    relief="flat"
+)
+button_4.place(
+    x=22.0,
+    y=219.0,
+    width=284.0,
+    height=43.33662796020508
+)
+
+canvas.create_rectangle(
+    396.0,
+    1.0,
+    1260.0,
+    65.0,
+    fill="#C5B7B7",
+    outline="")
+
+image_image_3 = PhotoImage(
+    file=relative_to_assets("image_3.png"))
+image_3 = canvas.create_image(
+    67.0,
+    115.0,
+    image=image_image_3
+)
+
+canvas.create_text(
+    138.0,
+    63.0,
+    anchor="nw",
+    text="SOPhyy",
+    fill="#FFFFFF",
+    font=("Lato Bold", 64 * -1)
+)
+
+canvas.create_text(
+    1157.0,
+    17.0,
+    anchor="nw",
+    text="10:30AM",
+    fill="#636363",
+    font=("Timmana", 24 * -1)
+)
+
+canvas.create_text(
+    468.0,
+    17.0,
+    anchor="nw",
+    text="Alejandro Villanueva   \n",
+    fill="#000000",
+    font=("Lato Regular", 24 * -1)
+)
+
+image_image_4 = PhotoImage(
+    file=relative_to_assets("image_4.png"))
+image_4 = canvas.create_image(
+    428.0,
+    31.0,
+    image=image_image_4
+)
+
+entry_image_1 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_1 = canvas.create_image(
+    769.0,
+    655.5,
+    image=entry_image_1
+)
+entry_1 = Entry(
+    bd=0,
+    bg="#FFFFFF",
+    fg="#000716",
+    highlightthickness=0
+)
+entry_1.place(
+    x=420.0,
+    y=642.0,
+    width=698.0,
+    height=25.0
 )
 window.resizable(False, False)
 window.mainloop()
